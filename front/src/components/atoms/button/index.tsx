@@ -1,4 +1,15 @@
-import React, { Component} from "react";
+import React from "react";
+import styled from 'styled-components';
+
+const ButtonStyled = styled.button`
+background: ${props => props.theme};
+color: ${props => props.theme};
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border: 2px solid Chartreuse;
+border-radius: 3px;
+`;
 
 export enum ButtonTypes {
     DANGER, 
@@ -7,17 +18,17 @@ export enum ButtonTypes {
 }
 
 export type Props = {
-    type: ButtonTypes,
-    children: React.ReactElement | string
+    theme: ButtonTypes,
+    children: React.ReactElement | string,
+    onClick(event: React.MouseEvent<HTMLElement>):void
 } 
 
-
 export const Button:React.FC<Props> = ({
-    type,
-    children
+    theme,
+    children,
+    onClick
 }) => {
     return (
-        <button>{children}</button>
+        <ButtonStyled onClick={onClick} theme={theme}>{children}</ButtonStyled>
     );
 };
-
