@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { render } from "react-dom";
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import App from './App';
 
-function App() {
-  const [state, setState] = useState("CLICK ME");
-
-  return <button onClick={() => setState("CLICKED")}>{state}</button>;
+function Index() {
+  return(
+    <Router>
+      <App/>
+    </Router>
+  )
 }
 
-render(<App />, document.getElementById("root"));
+render(<Index />, document.getElementById("root"));
