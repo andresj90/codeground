@@ -1,0 +1,25 @@
+{
+    "navbrand": {
+        "title": "Code Ground",
+        "link": "/",
+        "role": "brand",
+        "icon": ""
+    },
+    "links": [
+        {
+            "title": "Posts",
+            "link": "/",
+            "role": "navigation"
+        },
+        {
+            "title": "Forum",
+            "link": "/",
+            "role": "navigation"
+        },
+        {
+            "title": "Ranking",
+            "link": "/",
+            "role": "navigation"
+        }
+    ]
+}

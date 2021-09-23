@@ -1,27 +1,29 @@
 .app_main {
-
 }
 
 .app_body {
-    display: grid;
+  display: grid;
 }
 
 .app_sidebar {
   grid-column-start: 1;
   grid-column-end: 3;
+  height: 100vh;
+  position: relative;
+  background-color: #494ca2;
 }
 
-.spa_container{
+.spa_container {
   grid-column-start: 4;
   grid-column-end: 12;
 }
 
 @media screen and (max-width: 767px) {
-   .app_body {
-    display:block;
-   }
+  .app_body {
+    display: block;
+  }
 
-   .pro-sidebar {
-       width: 100%;
-   }
+  .pro-sidebar {
+    width: 100%;
+  }
 }

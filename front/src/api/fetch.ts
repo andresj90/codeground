@@ -1,0 +1,1 @@
+export const fetchData = (url: string, type: string) => fetch(url, { method: type });
